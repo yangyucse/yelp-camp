@@ -7,6 +7,7 @@ if (process.env.NODE_ENV !== "production") {
 const express = require("express");
 const app = express();
 const path = require("path");
+const Campground = require("./models/campground");
 const User = require("./models/user");
 //const User = require("./models/user");
 const ejsMate = require("ejs-mate");
