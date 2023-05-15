@@ -7,7 +7,8 @@ if (process.env.NODE_ENV !== "production") {
 const express = require("express");
 const app = express();
 const path = require("path");
-const User = require("./models/user");
+import User from "./models/user";
+//const User = require("./models/user");
 const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const flash = require("connect-flash");
