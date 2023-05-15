@@ -1,0 +1,37 @@
+<% layout('/layouts/boilerplate') %>
+    <div class="container justify-content-center align-items-center">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <img src="https://i.pinimg.com/originals/85/7f/12/857f12b146637e3c266fe57d72a6a6f0.jpg" alt=""
+                            class="card-img-top">
+                        <h5>Login</h5>
+
+                        <form action="/login" method="POST" novalidate class="validation-form">
+                            <div class="mb-3">
+                                <label class="form-label" for="username">Username: </label>
+                                <input class="form-control" type="text" id="username" name="username" autofocus
+                                    required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="password">Password: </label>
+                                <input class="form-control" type="password" id="password" name="password" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-success">
+                                    Login
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
