@@ -62,7 +62,7 @@ store.on("error", function (e) {
 
 const sessionConfig = {
   store,
-  secret,
+  //secret,
   resave: false,
   saveUninitialized: true,
   cookie: {
@@ -81,7 +81,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use((req, res, next) => {
-  //console.log('req', req.session.returnTo);
+  console.log('req', req.session.returnTo);
   res.locals.currentUser = req.user;
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
