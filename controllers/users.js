@@ -28,7 +28,7 @@ module.exports.login = (req, res) => {
   //console.log("login:", req.session.returnTo);
   const redirectUrl = req.session.returnTo || "/campgrounds";
   delete req.session.returnTo;
-  res.redirect(redirectUrl);
+  return res.redirect(redirectUrl);
 };
 
 module.exports.logout = (req, res, next) => {
