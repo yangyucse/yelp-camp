@@ -7,7 +7,7 @@
     "start": "node app.js"
   },
   "engines": {
-    "node": "16.x"
+    "node": "v16.15.1"
   },
   "keywords": [],
   "author": "",
