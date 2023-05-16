@@ -20,19 +20,18 @@ const dbUrl = process.env.DB_URL ||'mongodb://localhost:27017/yelp-camp';
 //process.env.DB_URL || 
 //process.env.DB_URL;
 //'mongodb://localhost:27017/yelp-camp'
-
-const campgroundRoutes = require('./routes/campgrounds');
-const reviewRoutes = require('./routes/reviews');
 const MongoStore = require('connect-mongo')(session);
 
+//const campgroundRoutes = require('./routes/campgrounds');
+const reviewRoutes = require('./routes/reviews');
 const userRoutes = require('./routes/users')
 const mongoose = require('mongoose');
 const { join } = require('path');
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
-    //useCreateIndex: true,
+    useCreateIndex: true,
     useUnifiedTopology: true,
-    //useFindAndModify: false
+    useFindAndModify: false
 
 })
 
